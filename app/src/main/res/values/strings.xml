@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Awesome Chat</string>
+    <string name="error_binding">Binding is not valid</string>
+    <string name="error_something_wrong">Something wrong \ud83d\ude05</string>
 </resources>
