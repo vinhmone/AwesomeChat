@@ -5,4 +5,13 @@
     <string name="text_chat">Chat</string>
     <string name="text_friend">Friend</string>
     <string name="text_profile">Profile</string>
+    <string name="text_start_with_awesome_chat">Start with Awesome chat</string>
+    <string name="text_login">Login</string>
+    <string name="text_email">Email</string>
+    <string name="text_your_email">your email</string>
+    <string name="text_password">Password</string>
+    <string name="text_pass_hint">********</string>
+    <string name="text_forgot_password">Forgot password?</string>
+    <string name="text_no_account">No account?</string>
+    <string name="text_signup_now">Signup now</string>
 </resources>
