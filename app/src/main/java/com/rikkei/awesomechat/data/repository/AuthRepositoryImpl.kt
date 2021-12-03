@@ -16,4 +16,7 @@ class AuthRepositoryImpl(
 
     override suspend fun signInWithEmailAndPassword(user: MutableLiveData<User>) =
         remote.signInWithEmailAndPassword(user)
+
+    override suspend fun signUpWithEmailAndPassword(user: MutableLiveData<User>) =
+        remote.signUpWithEmailAndPassWord(user)
 }
