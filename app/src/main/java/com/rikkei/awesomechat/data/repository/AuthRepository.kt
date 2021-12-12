@@ -9,5 +9,4 @@ interface AuthRepository {
     suspend fun getCurrentUser(): FirebaseUser?
     suspend fun signInWithEmailAndPassword(user: MutableLiveData<User>)
     suspend fun signUpWithEmailAndPassword(user: MutableLiveData<User>)
-
 }

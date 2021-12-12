@@ -23,5 +23,6 @@
     <string name="text_term">terms</string>
     <string name="text_have_account">Already have an account?</string>
     <string name="text_register_now">Login now</string>
-    <string name="success_register_login">Successful</string>
+    <string name="success_register">Register successful</string>
+    <string name="success_login">Login successful</string>
 </resources>

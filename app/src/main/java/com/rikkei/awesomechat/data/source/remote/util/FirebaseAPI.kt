@@ -46,6 +46,7 @@ object FirebaseAPI {
                 }
                 .addOnFailureListener {
                     user.value = newUser
+                    it.printStackTrace()
                 }
         }
     }
