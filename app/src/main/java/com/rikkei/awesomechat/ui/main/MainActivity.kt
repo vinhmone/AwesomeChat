@@ -1,5 +1,6 @@
 package com.rikkei.awesomechat.ui.main
 
+import android.view.WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.rikkei.awesomechat.R
@@ -14,6 +15,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
     private val navHostFragment by lazy {
         supportFragmentManager.findFragmentById(R.id.fragment_container) as NavHostFragment
     }
+
     private val navController by lazy { navHostFragment.navController }
 
     override fun initViews() {
@@ -25,5 +27,4 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
     fun changeBottomNavStatus(isEnable: Int) {
         viewBinding.groupBottomNav.visibility = isEnable
     }
-
 }
