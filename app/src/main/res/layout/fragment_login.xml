@@ -5,7 +5,6 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
         <variable
             name="viewModel"
             type="com.rikkei.awesomechat.ui.login.LoginViewModel" />
@@ -14,6 +13,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_gravity="center"
         android:background="@android:color/white"
         tools:context=".ui.login.LoginFragment">
 
@@ -81,8 +81,8 @@
             android:autofillHints="@null"
             android:fontFamily="@font/lato_regular"
             android:hint="@string/text_your_email"
-            android:maxLength="30"
             android:inputType="textEmailAddress"
+            android:maxLength="30"
             android:textColor="@android:color/black"
             android:textColorHint="@color/silver"
             android:textSize="@dimen/sp_18"
@@ -198,7 +198,11 @@
             android:id="@+id/text_signup_now"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+<<<<<<< Updated upstream
             android:layout_marginStart="@dimen/dp_2"
+=======
+            android:layout_marginStart="@dimen/dp_6"
+>>>>>>> Stashed changes
             android:fontFamily="@font/lato_bold"
             android:text="@string/text_signup_now"
             android:textColor="@color/san_marino"

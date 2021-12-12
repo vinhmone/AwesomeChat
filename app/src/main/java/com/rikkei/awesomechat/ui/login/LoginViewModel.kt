@@ -17,11 +17,12 @@ class LoginViewModel @Inject constructor(
 ) : BaseViewModel() {
 
     private val _user = MutableLiveData<User>()
+
     val user: LiveData<User>
         get() = _user
 
     fun validateUser(action: () -> Unit) {
-        viewModelScope.launch(Dispatchers.IO + exceptionHandler) {
+        viewModelScope.launch(Dispatchers.Main + exceptionHandler) {
             if (repository.validateUser()) {
                 action()
             }
@@ -29,13 +30,13 @@ class LoginViewModel @Inject constructor(
     }
 
     fun setUser(email: String, pass: String) {
-        _user.value = User(email = email, password = pass)
+        _user.value = User(uid = null, email = email, password = pass)
         println(email)
     }
 
 
     fun login() {
-        viewModelScope.launch(Dispatchers.IO + exceptionHandler) {
+        viewModelScope.launch(Dispatchers.Main + exceptionHandler) {
             repository.signInWithEmailAndPassword(_user)
         }
     }
