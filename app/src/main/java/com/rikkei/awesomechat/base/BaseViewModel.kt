@@ -14,11 +14,11 @@ abstract class BaseViewModel : ViewModel() {
     private val _isLoading = MutableLiveData<Event<Boolean>>().apply { value = Event(false) }
     val isLoading: LiveData<Event<Boolean>>
         get() = _isLoading
-    private val _message = MutableLiveData<Event<@StringRes Int>>()
+    protected val _message = MutableLiveData<Event<@StringRes Int>>()
     val message: LiveData<Event<Int>>
         get() = _message
 
-    protected val exceptionHandlerFactory = CoroutineExceptionHandler { _, throwable ->
+    protected val exceptionHandler = CoroutineExceptionHandler { _, throwable ->
         viewModelScope.launch {
             _message.value = Event((R.string.error_something_wrong))
             throwable.printStackTrace()
