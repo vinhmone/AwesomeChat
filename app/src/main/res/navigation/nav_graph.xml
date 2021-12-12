@@ -9,5 +9,38 @@
         android:id="@+id/loginFragment"
         android:name="com.rikkei.awesomechat.ui.login.LoginFragment"
         android:label="LoginFragment"
-        tools:layout="@layout/fragment_login" />
+        app:destination="@id/loginFragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment"
+            app:enterAnim="@animator/slide_in_right"
+            app:exitAnim="@animator/slide_out_left"
+            app:popEnterAnim="@animator/slide_in_left"
+            app:popExitAnim="@animator/slide_out_right" />
+        <action
+            android:id="@+id/action_loginFragment_to_mainChatFragment"
+            app:destination="@id/mainChatFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/mainChatFragment"
+           />
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.rikkei.awesomechat.ui.register.RegisterFragment"
+        android:label="RegisterFragment"
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/mainChatFragment"
+        android:name="com.rikkei.awesomechat.ui.mainchat.MainChatFragment"
+        android:label="MainChatFragment"
+        tools:layout="@layout/fragment_main_chat" />
 </navigation>

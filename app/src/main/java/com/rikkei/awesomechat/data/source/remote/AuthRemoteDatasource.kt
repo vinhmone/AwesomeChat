@@ -15,4 +15,8 @@ class AuthRemoteDatasource : AuthDataSource.Remote {
 
     override suspend fun signInWithEmailAndPassword(user: MutableLiveData<User>) =
         FirebaseAPI.signInWithEmailAndPassword(user)
+
+    override suspend fun signUpWithEmailAndPassWord(user: MutableLiveData<User>) =
+        FirebaseAPI.signUpWithEmailAndPassword(user)
+
 }

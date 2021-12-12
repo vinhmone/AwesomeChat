@@ -1,7 +1,6 @@
 package com.rikkei.awesomechat.data.model
 
 import android.os.Parcelable
-import androidx.room.Entity
 import kotlinx.parcelize.Parcelize
 
 @Parcelize

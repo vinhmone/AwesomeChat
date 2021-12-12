@@ -7,6 +7,7 @@ import android.util.Log
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.rikkei.awesomechat.R
 import com.rikkei.awesomechat.base.BaseFragment
 import com.rikkei.awesomechat.databinding.FragmentLoginBinding
@@ -16,6 +17,8 @@ import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class LoginFragment : BaseFragment<FragmentLoginBinding>(), View.OnClickListener {
+
+    private val TAG: String = LoginFragment::class.java.name
 
     override val layoutResource get() = R.layout.fragment_login
     override val viewModel: LoginViewModel by viewModels()
@@ -145,23 +148,10 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>(), View.OnClickListener
 
     }
 
-    private fun openRegisterFragment() {
-<<<<<<< Updated upstream
 
-    }
-
-    private fun loginSuccess() {
-
-=======
-        val action = LoginFragmentDirections.actionLoginFragmentToRegisterFragment()
-        findNavController().navigate(action)
-    }
 
     private fun loginSuccess() {
         context?.showToast(getString(R.string.success_login))
-//        val action = LoginFragmentDirections.actionLoginFragmentToMainChatFragment()
-//        findNavController().navigate(action)
->>>>>>> Stashed changes
     }
 }
 

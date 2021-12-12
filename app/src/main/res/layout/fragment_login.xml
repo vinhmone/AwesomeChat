@@ -138,6 +138,7 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginEnd="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_10"
             android:src="@drawable/ic_password"
             app:layout_constraintBottom_toBottomOf="@id/edit_password"
             app:layout_constraintDimensionRatio="1:1"
@@ -182,10 +183,11 @@
 
         <TextView
             android:id="@+id/text_no_account"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/dp_30"
+            android:layout_marginBottom="28dp"
             android:fontFamily="@font/lato_regular"
+            android:gravity="end"
             android:text="@string/text_no_account"
             android:textColor="@android:color/darker_gray"
             android:textSize="@dimen/sp_14"
@@ -196,15 +198,16 @@
 
         <TextView
             android:id="@+id/text_signup_now"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-<<<<<<< Updated upstream
-            android:layout_marginStart="@dimen/dp_2"
-=======
+
+
+
             android:layout_marginStart="@dimen/dp_6"
->>>>>>> Stashed changes
+
             android:fontFamily="@font/lato_bold"
             android:text="@string/text_signup_now"
+            android:layout_marginStart="@dimen/dp_6"
             android:textColor="@color/san_marino"
             android:textSize="@dimen/sp_14"
             app:layout_constraintBottom_toBottomOf="@id/text_no_account"

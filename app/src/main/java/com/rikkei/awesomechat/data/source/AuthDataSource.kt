@@ -10,5 +10,6 @@ interface AuthDataSource {
         suspend fun validateUser(): Boolean
         suspend fun getCurrentUser(): FirebaseUser?
         suspend fun signInWithEmailAndPassword(user: MutableLiveData<User>)
+        suspend fun signUpWithEmailAndPassWord(user: MutableLiveData<User>)
     }
 }
